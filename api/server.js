@@ -1,19 +1,18 @@
-require("dotenv").config(); // Importa o dotenv no início do arquivo
+require("dotenv").config(); 
 const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
-const cors = require("cors"); // Importa o cors
+const cors = require("cors"); 
 
 const app = express();
 
-// Permite requisições de qualquer origem
 const corsOptions = {
-  origin: "*", // Aceita requisições de qualquer origem
-  methods: ["POST"], // Permite GET e POST
-  allowedHeaders: ["Content-Type"], // Permite cabeçalhos específicos
+  origin: "*", 
+  methods: ["POST"], 
+  allowedHeaders: ["Content-Type"], 
 };
 
-app.use(cors(corsOptions)); // Adiciona o CORS ao seu servidor
+app.use(cors(corsOptions)); 
 
 app.use(bodyParser.json());
 
